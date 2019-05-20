@@ -1765,7 +1765,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f97a2f;
+  background: #ff62ff;
 }
 .feed-link,
 .chat {
@@ -2016,6 +2016,9 @@ pre .javascript .function {
   50%, 70% {
     transform: scale(1.1);
   }
+}
+i.fa {
+  font-family: FontAwesome !important;
 }
 .local-search-pop-overlay {
   position: fixed;
