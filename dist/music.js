@@ -6,7 +6,7 @@ const ap = new APlayer({
       {
         name: "Last Christmas",
         artist: 'Taylor Swift',
-        url: 'https://music.163.com/song?id=2002351&userid=1592076880',
+        url: 'http://www.ytmp3.cn/down/58440.mp3',
         cover: 'http://oeff2vktt.bkt.clouddn.com/image/84.jpg',
       }
     ]
