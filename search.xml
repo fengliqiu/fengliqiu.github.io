@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Java设计基础]]></title>
     <url>%2F2019%2F06%2F29%2FJava%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[前言最近寻思着要入门Java，原因有如下几点：o 算法基础薄弱，想好好学习算法，然而《算法》这本书是以Java为基础的，入学近一年，只是粗略地了解学习了C语言，啃起来感觉力不从心。o Java具有很多优良的特性，一方面Java语言具有面向对象，可移植性，强壮性，与安全性等优良特性，另一方面Java技术对各个层次的分布式应用提供了系统的方法与技术，可以看出Java已经从单纯的程序设计语言发展成为支撑Internet 计算的庞大技术体系，因此有必要好好研究。o 本文将作为博主学习Java的主线，一方面记录博主的学习历程，以便于日后Java进阶及巩固，另一方面将其作为博主知识体系的一部分，便于博主不断地完善扩大自己的知识储备。]]></content>
   </entry>
   <entry>
     <title><![CDATA[六一的二三往事]]></title>
