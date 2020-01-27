@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[66. 加一]]></title>
+    <url>%2F2020%2F01%2F27%2F66-%E5%8A%A0%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。你可以假设除了整数 0 之外，这个整数不会以零开头。示例 1:123输入: [1,2,3]输出: [1,2,4]解释: 输入数组表示数字 123。示例 2:123输入: [4,3,2,1]输出: [4,3,2,2]解释: 输入数组表示数字 4321。思路：其实加一按照题目的理解只有两种情况：1.数字9加一2.除9外的数字加一]]></content>
+      <categories>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>LeetCode杂题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[27. 移除元素]]></title>
+    <url>%2F2020%2F01%2F27%2F27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%2F</url>
+    <content type="text"><![CDATA[给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。示例 1:给定 nums = [3,2,2,3], val = 3,函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。你不需要考虑数组中超出新长度后面的元素。示例 2:给定 nums = [0,1,2,2,3,0,4,2], val = 2,函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。思路：这道题本身并没有什么难度，但是题目要求必须在原地修改数组，一般情况下认为在不复制数组的情况下进行删除数组中的元素是不可能的，可能会造成一定的误解。提供两种思路：法一：双指针法（java版）12345678910public int removeElement(int[] nums, int val) &#123; int i = 0; for (int j = 0; j &lt; nums.length; j++) &#123; if (nums[j] != val) &#123; nums[i] = nums[j]; i++; &#125; &#125; return i;&#125;法二：双指针法：当要删除的元素很少时代码（c++）1234567891011121314151617class Solution &#123;public: int removeElement(vector&lt;int&gt;&amp; nums, int val) &#123; int i=0,n=nums.size(); while(i&lt;n) &#123; if(nums[i]==val)&#123; nums[i]=nums[n-1]; n--; &#125; else&#123; i++; &#125; &#125; return i; &#125;&#125;;]]></content>
+      <categories>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>LeetCode杂题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[35. 搜索插入位置]]></title>
     <url>%2F2020%2F01%2F27%2F35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。你可以假设数组中无重复元素。示例 1:12输入: [1,3,5,6], 5输出: 2示例 2:12输入: [1,3,5,6], 2输出: 1示例 3:12输入: [1,3,5,6], 7输出: 4示例 4:12输入: [1,3,5,6], 0输出: 0题解：二分查找，但应当注意二分查找的实现细节：1234567891011121314151617181920212223class Solution &#123;public: int searchInsert(vector&lt;int&gt;&amp; nums, int target) &#123; int left=0,right=nums.size(); while(left&lt;right) &#123; int mid=left+(right-left)/2; if(nums[mid]==target) &#123; return mid; &#125; else if(nums[mid]&lt;target) &#123; left=mid+1; &#125; else if(nums[mid]&gt;target) &#123; right=mid; &#125; &#125; return left; &#125;&#125;;二分查找的思路并不难理解，但是二分查找的边界条件极易出错，比如：循环结束条件中 left 和 right 的关系，更新 left 和 right 位置时要不要加 1 减 1。下面给出一般常见的二分查找的模板，二分类的问题直接套用模板即可，给出Java版本的：1234567891011121314151617class Solution &#123; public int searchInsert(int[] nums, int target) &#123; int left = 0, right = nums.length - 1; // 注意 while(left &lt;= right) &#123; // 注意 int mid = (left + right) / 2; // 注意 if(nums[mid] == target) &#123; // 注意 // 相关逻辑 &#125; else if(nums[mid] &lt; target) &#123; left = mid + 1; // 注意 &#125; else &#123; right = mid - 1; // 注意 &#125; &#125; // 相关返回值 return 0; &#125;&#125;1234567891011121314151617class Solution &#123; public int searchInsert(int[] nums, int target) &#123; int left = 0, right = nums.length; // 注意 while(left &lt; right) &#123; // 注意 int mid = (left + right) / 2; // 注意 if(nums[mid] == target) &#123; // 相关逻辑 &#125; else if(nums[mid] &lt; target) &#123; left = mid + 1; // 注意 &#125; else &#123; right = mid; // 注意 &#125; &#125; // 相关返回值 return 0; &#125;&#125;当然了，个人感觉第二种模板比较舒服一些，因人而异吧，两种方法差不太远。当然了，有的说法认为下面这种写法不太好，应该是溢出的问题1mid=(left+right)/2;换成这种写法应该更好：1mid=left+(right-left)/2;]]></content>
