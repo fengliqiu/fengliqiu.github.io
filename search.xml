@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux下配置pycharm]]></title>
+    <url>%2F2020%2F01%2F29%2FLinux%E4%B8%8B%E9%85%8D%E7%BD%AEpycharm%2F</url>
+    <content type="text"><![CDATA[下载pycharm的安装包.*进入pycharm官网，有两种版本，professional和community，一般情况下community版本的功能就够用了，而且免费，直接download就可以.*进入跳转页面，出现提示框后，点击保存，开始下载.*下载完成后，安装包在下载文件夹下.安装pycharm*双击安装包，提取到此处，会得到一个pycharm-community-2019.3.2这个样子.​ *进入pycharm-community-2019.3.2/bin文件夹打开终端，运行以下命令：​1sh ./pycharm.sh​ *然后就会跳转出安装界面，按照在Windows操作系统下安装pycharm的步骤慢慢来就好，记得选择合适自己的配置。3.创建pycharm的快捷方式​ 值得注意的是Linux系统下的pycharm和Windows下的pycharm稍有不同，Linux系统中不会自动创建pycharm的快捷方式，这就导致了打开pycharm时造成了很大的不便，两种解决办法：​ (1)进入pycharm的安装路径bin目录下，键入命令：1./pycharm.sh​ (2)创建pycharm在Linux系统中的快捷方式：​ *在终端键入以下命令：​1sudo gedit /usr/share/applications/Pycharm.desktop​ *打开编辑器后，粘贴一下模板：​123456789[Desktop Entry]Type=ApplicationName=PycharmGenericName=Pycharm3Comment=Pycharm3:The Python IDEExec=sh /home/peng/下载/pycharm-community-2019.3.2/bin/pycharm.shIcon= /home/peng/下载/pycharm-community-2019.3.2/bin/pycharm.pngTerminal=pycharmCategories=Pycharm;保存退出，然后搜索pycharm，应该就会有相应的图标了值得注意的几点：*Exec和Icon的两行代码后的目录路径根据自己的目录而定，两行代码所不同的只有pycharm.sh和pycharm.png的区别*sh和=后面的空格很重要，没有空格不work，我也不知道为什么..*如果搜索不到的话可以重新启动计算机，重启之后应该就可以了]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[66. 加一]]></title>
     <url>%2F2020%2F01%2F27%2F66-%E5%8A%A0%E4%B8%80%2F</url>
     <content type="text"><![CDATA[给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。你可以假设除了整数 0 之外，这个整数不会以零开头。示例 1:123输入: [1,2,3]输出: [1,2,4]解释: 输入数组表示数字 123。示例 2:123输入: [4,3,2,1]输出: [4,3,2,2]解释: 输入数组表示数字 4321。思路：其实加一按照题目的理解只有两种情况：1.数字9加一2.除9外的数字加一]]></content>
