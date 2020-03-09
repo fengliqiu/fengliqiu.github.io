@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Physical Layer]]></title>
+    <url>%2F2020%2F03%2F09%2F%E8%AE%A1%E7%BD%91The-Physical-Layer%2F</url>
+    <content type="text"><![CDATA[Position and Function of Physical LayerThe lowest layer in our protocol model.It defines the electrical, timing and other interfaces by which bits are sent as signals over channels.Basic Concepts on Data CommunicationsSimplified Data Communications Model源，目的地，信道，公网Fundamental Concepts]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计网Introduction]]></title>
     <url>%2F2020%2F03%2F09%2F%E8%AE%A1%E7%BD%91Introduction%2F</url>
     <content type="text"><![CDATA[What is a Computer Network?What can we do with Computer Networks?Categories of Computer NetworkNetwork architecture and protocolsReference ModelsExample NetworksNetwork Standardization]]></content>
