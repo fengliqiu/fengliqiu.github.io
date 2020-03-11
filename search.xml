@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The-Physical-Layer-3]]></title>
+    <url>%2F2020%2F03%2F11%2F%E8%AE%A1%E7%BD%91The-Physical-Layer-3%2F</url>
+    <content type="text"><![CDATA[Guider Transmission Media]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Physical Layer(2)]]></title>
     <url>%2F2020%2F03%2F09%2F%E8%AE%A1%E7%BD%91The-Physical-Layer-2%2F</url>
     <content type="text"><![CDATA[Theoretical Basis for Data CommunicationFourier Transform（傅里叶变换）Any periodic signal g(t) with period T (=1/f) can be constructed by summing a (possibly infinite) number of sines and cosinesg(t)=\cfrac{1}{2}c+\sum_{n=1}^{\infty}a_{n}sin(2\pi nft)+\sum_{n=1}^{\infty}b_{n}cos(2\pi nft)To construct signal g(t) we need to compute the values 振幅a0, a1, …, b0, b1, …, and 常数cEnergy: proportional to root-mean-square amplitude $\sqrt{a_{n}^2+b_{n}^2}$Often the magnitude of the an’s and bn’s get smaller as the frequency $(2\pi nft)$gets higher (频率越高，能量越小)BandwidthNo transmission facility can transmit signal without losing some power.All transmission facilities diminish different Fourier components by different amounts .Range of frequencies transmitted without being strongly (0.5) attenuated is called bandwidth.Telephone wire’s bandwidth: 1 MHzUTP 5: 100MHzbandwidth is a physical property of the transmission medium, depends on .constructionthicknesslengthbandwidth：Hz, bpsCapacity for noiseless channel(无噪声信道)Nyquist proved that: if an arbitrary signal has been run through a low-pass filter of bandwidth B, the filtered signal can be completely reconstructed by making only 2B samples per second .Given binary signal, data rate supported by B Hz is 2B bpsNyquist Bit Rate(奈奎斯特公式，1924)bit\ rate=2*bandwidth*log_{2}v&gt; V is the number of signal levels used to represent data Capacity for noiseless channel(无噪声信道)Noisy Channel: Shannon Capacity一些例题：]]></content>
