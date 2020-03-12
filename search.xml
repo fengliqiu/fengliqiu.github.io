@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Physical Layer(4)]]></title>
+    <url>%2F2020%2F03%2F12%2F%E8%AE%A1%E7%BD%91The-Physical-Layer-4%2F</url>
+    <content type="text"><![CDATA[Digital Modulation and MultiplexingSignal Encoding TechniquesDigital data, digital signalDigital data, analog signalAnalog data, digital signalAnalog data, analog signalBaseband transmission vs Passband transmissionBaseband signal:Signals that run from 0 up to a maximum frequency.Passband signal:Signals that are shifted to occupy a higher range of frequencies.eg.wireless transmissionsBaseband transmission: In which the signals occupies frequencies from 0 to a maximum frequency.Passband transmission: In which the signals occupies a band of frequencies around the frequency of the carrier signal.在一条传输介质上不能传两路基带信号，原因是两路基带信号的频率重叠，会互相干扰在一条传输介质上可以可能同时传两路通带信号，只要两路通带信号频率不相互重叠基带信号一般用于短距离传输，不是很常用.通带信号一般用于长距离传输，很常用和常见.Baseband transmissionNRZ不归零码.曼彻斯特码.AMI码.以上三种码是重点研究对象的码.光纤不能同时传正负信号.即这种AMI码.ManchesterTransition in middle of each bit periodTransition serves as clock and dataLow to high represents 1,High to low represents 0Used by IEEE 802.3 LAN]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Physical Layer(3)]]></title>
     <url>%2F2020%2F03%2F11%2F%E8%AE%A1%E7%BD%91The-Physical-Layer-3%2F</url>
     <content type="text"><![CDATA[Guider Transmission Media]]></content>
