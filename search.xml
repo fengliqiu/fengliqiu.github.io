@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Data Link Layer(2)]]></title>
+    <url>%2F2020%2F04%2F02%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-2%2F</url>
+    <content type="text"><![CDATA[Framing数据链路层的单位是帧，发送到物理层，在物理层中传输的是比特流A sequence of bits is sent from node A to node B over a point-to-point link.Node B must recognize exactly what set of bits constitutes a frame, that is, it must determine where the frame begins and ends.]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Data Link Layer(1)]]></title>
     <url>%2F2020%2F04%2F01%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-1%2F</url>
     <content type="text"><![CDATA[Why do we need Data Link Control?Probable transmission bit errors in physical layer：error controlReceiver may need to prevent too much data coming in: flow controlBroadcast channel: addressing, media access controlPosition and FunctionsData link layer has responsibility of transferring data (frame) from one node to adjacent node in a reliable and efficient way over a link1.Error control:差错检验2.Flow control:流量控制3.Addressing:寻址4.Packetizing:封装成帧网络层来的数据需要封装成帧，加头加尾，用以实现以上各种功能。Data Link Layer Design IssuesGoalsStudy the algorithms for achieving reliable, efficient communication between two adjacent machinesData Link Layer Design IssuesServices Provided to the Network LayerFramingError Control: Dealing with transmission errorsFlow Control: Slow receivers not swamped by fast sendersFunctions of Data Link Layer: IllustrationPackets vs. FramesData Link Layer: hop-to-hop communication(逐跳通信)Data Link Layer: Adapters CommunicatingSending side:Encapsulates network packet in a frameAdds error checking bits, reliable transfer, flow control, etc.Receiving sideLooks for errors, reliable transfer, flow control, etcExtracts packet, passes to receiving nodeLink layer implemented in “adapter” (NIC)Ethernet card, PCMCIA card, 802.11 cardServices Provided to Network Layer（1）链路层是虚拟通信，数据带有协议，不是普通的物理层Services Provided to Network Layer(2)Connectionless servicesUnacknowledged connectionless serviceNo acknowledgement, no logical connectionMost LANs use such serviceAcknowledged connectionless serviceEach frame acknowledged, used in unreliable channel, such as wireless systemsAcknowledged connection-oriented serviceA connection established, frames are numbered, reliable transmission guaranteed, eg. ATM提供的三种服务，从可靠度来讲，从上到下，越来越可靠；从复杂度来讲，从上到下，越来越复杂。123&gt;&gt; 面向连接和无连接与可靠度之间的关系：面向连接和无连接是从提供服务的角度讲，需不需要建立连接，连接包括物理连接和逻辑连接，比较直观的例子就是，电路交换是物理连接而分组交换是逻辑连接，所谓的建立连接就是收发双方需要先进行握手，而所谓的握手就是要协商一些通信相关的参数，建立连接之后再传输数据，传输完数据之后再进行连接拆除，所以总共有三个阶段。&gt;&gt; 面向连接的服务一定有三个阶段，而无连接的服务只需一个阶段，直接把要传的数据传输出去，这就是有连接服务和无连接服务的区别。1.第一种服务有两个关键词，‘无确认’，‘无连接’，就一个数据传输的阶段，快速，简洁，没有确认无连接服务一般是一个地址的全地址。适用场合：1.信道非常可靠，传输不可能出错，比如光纤，几乎零误码2.近距离通信，LAN，由于距离很近，所以误码率极低其实总结来说，就是误码率很低的场合。另外还有一种场合比较适用，对实时性要求很高，语音电话，视频直播，即：对实时性的追求高于误码率，对时延和带宽非常敏感，要求很高，但是对误码率要求不高，在这种情况下可以通过牺牲一定的可靠性来换取高实时性。2.有确认的无连接服务。信道质量不足够好，eg:wifi，每发一个包一定要确认对方一个ACK，如果没有收到ACK，则会再次重发。这种服务能保证数据能够到达对方，但是不保证数据有序，不重复3.可靠度最高的服务。通信分为三个阶段。所谓的可靠性是指：不丢失，不重复，无差错，按序。eg:因特网的骨干网，长途电话网，ATM网，低轨卫星只要是有确认的服务，一般都要求是双向信道，双向通信]]></content>
