@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Data Link Layer(3)]]></title>
+    <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-3%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Data Link Layer(2)]]></title>
     <url>%2F2020%2F04%2F02%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-2%2F</url>
     <content type="text"><![CDATA[Framing数据链路层的单位是帧，发送到物理层，在物理层中传输的是比特流A sequence of bits is sent from node A to node B over a point-to-point link.Node B must recognize exactly what set of bits constitutes a frame, that is, it must determine where the frame begins and ends.]]></content>
