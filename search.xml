@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Data Link Layer(5)]]></title>
+    <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-5%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[计网The Data Link Layer(4)]]></title>
+    <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-4%2F</url>
+    <content type="text"><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Data Link Layer(3)]]></title>
     <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-3%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[Error Control （差错控制）Type of ErrorsLost frames: a frame failed to arrive to the other sideOwing to noise burst or dropped from a queueDamaged frames: some bits are in errorError detectionParity check: able to detect single bit errorsCyclic Redundancy Check (CRC): detecting some burst errorsChecksum, to be studied in Network layerError correctionForward Error Correction (FEC，前向纠错)Retransmission: Automatic Repeat reQuest(ARQ)Single-bit Error &amp; Burst Error在差错控制中会有丢帧和帧损坏，差错控制只考虑帧损坏，而帧损坏又分为两种情况：单比特错误(普遍存在)，突发错误。奇偶校验单个奇偶校验位性能可检验出奇数个位反转错误其他情况漏检率为50%Error Correcting Code（纠错码）基本思路：将冗余信息加入到待发送的信息中基本术语Block code（块码）Systematic code 先发m位数据,再发r位校验$XOR\quad B$]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[计网The Data Link Layer(2)]]></title>
     <url>%2F2020%2F04%2F02%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-2%2F</url>
-    <content type="text"><![CDATA[Framing数据链路层的单位是帧，发送到物理层，在物理层中传输的是比特流A sequence of bits is sent from node A to node B over a point-to-point link.Node B must recognize exactly what set of bits constitutes a frame, that is, it must determine where the frame begins and ends.]]></content>
+    <content type="text"><![CDATA[Framing数据链路层的单位是帧，发送到物理层，在物理层中传输的是比特流A sequence of bits is sent from node A to node B over a point-to-point link.Node B must recognize exactly what set of bits constitutes a frame, that is, it must determine where the frame begins and ends.分层和成帧的区别：段对于网络层来说是数据，在网络层将段分为三片，分成三片的过程叫做分层，把上层的数据包分成小段，每一段都要加上IP层的头，即第三层的头。分片是在网络层完成的。第三层的packet传往数据链路层之后还要加上头和尾，然后小段的数据就变成了数据链路层的帧。成帧包括发送方的封装帧和接收方的识别帧。Goal: Framing(拆分比特流)RequirementsSimple—容易实现code independence——与传输的消息内容无关efficient—使用的信道带宽尽量少robustness——不易出错，出错后易重新同步MethodsCharacter count (字符计数法)Flag byte with byte stuffing (字符填充法)Starting and ending flags, with bit stuffing(比特填 充法)Physical layer coding violations (物理层编码违例法)Character Count(字符计数法)Using a field in header to specify number of characters in the frameThe count may be garbled by a transmission errorByte (Character) Stuffing(字节/字符填充)Using flag bytes to mark the starting and ending of a frameClosely tied to the use of 8-bit characterstransparent transmission（透明传输）What if payload includes same byte with the flag?Using special stuffing byte: ESC (eg. 0x1B)Inserted before “flag” in payloadBit Stuffing（比特填充）为什么要引入比特填充？比特填充是面向字符的协议，例如PPP协议，但是还有很多链路层的协议是面向Bit的，也就是说协议的长度不是8，不是一个字符的整数倍(8bit的整数倍)，为了增加通用性引入了比特填充的方法。Allowing a frame to contain arbitrary number of bitsStarting and ending flag: 0111,1110Possible Errors of Bit Stuffing例题：从信道上收到比特序列： 1101 0111 1110 0111 1110 1101 1011 1110 0010 1100 0101 1111 0101 1001 1111 1001，该比特序 列中包含一个完整的帧，用十六进制写出该帧的内 容（不包含帧的首尾标志）。要点：HDLC使用比特填充法成帧，帧定界符为 01111110，在帧的内容中若出现连续的5个1，则 立即插入1个0，应该去掉加入的0可以狭义地理解为反向传播。BP算法（雾）Physical Layer Coding Violations （物理层编码违例法）应用在物理层，并没有应用在链路层，没有在链路层上增加额外的信息，一般来说在局域网上用这种方法Applicable to encoding schemes with redundancyFor example, in LAN, Manchester encoding is usedEach valid bit has a transition in the middle of signalThen code without transition, i.e. high-high and low-low are used for frame delimitation物理层编码违例法用的是物理层编码的特性，即：在正常的码型中绝对不可能出现的编码现象。]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
