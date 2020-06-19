@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计网The Medium Access Control Sublayer (1)]]></title>
+    <url>%2F2020%2F04%2F16%2F%E8%AE%A1%E7%BD%91The-Medium-Access-Control-Sublayer-1%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[指令系统]]></title>
+    <url>%2F2020%2F04%2F12%2F%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[指令系统的概念程序是由一系列有序且有一定意义的指令组成的指令（机器指令）：命令计算机直接进行某种操作的二进制代码串每条指令可以完成一个独立的算术运算或逻辑运算或数据传送等基本操作直接由硬件支持，软件可控制的最小动作单元程序员按照指令格式编写软件而不必考虑机器如何实现指令的功能指令系统：一台计算机能直接理解与执行的全部指令的集合指令是软件和硬件之间的接口]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计网The Data Link Layer(5)]]></title>
     <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-5%2F</url>
     <content type="text"><![CDATA[]]></content>
@@ -8,7 +30,7 @@
   <entry>
     <title><![CDATA[计网The Data Link Layer(4)]]></title>
     <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-4%2F</url>
-    <content type="text"><![CDATA[Error Correcting &amp; DetectingOn channels that are reliable, such as fiber, it is cheaper to use an error detecting code and just retransmit the occasional block found to be faultyOn channels such as wireless links that make many errors, it is better to add enough redundancy to each block for the receiver to be able to figure out what the original block was, i.e. using error correcting codeExample:Bit Error Rate(BER)=10-6, 1block=1000bits, Data=1Mbits``]]></content>
+    <content type="text"><![CDATA[Error Correcting &amp; DetectingOn channels that are reliable, such as fiber, it is cheaper to use an error detecting code and just retransmit the occasional block found to be faultyOn channels such as wireless links that make many errors, it is better to add enough redundancy to each block for the receiver to be able to figure out what the original block was, i.e. using error correcting codeExample:$Bit Error Rate(BER)=10^{-6}$, $1block=1000bits, Data=1Mbits $The overhead for 1000 blocksError detection(parity check) + retransmission: 2001 bitsHamming code : 10,000 bits, with 10 check bits for each block]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
@@ -19,7 +41,7 @@
   <entry>
     <title><![CDATA[计网The Data Link Layer(3)]]></title>
     <url>%2F2020%2F04%2F04%2F%E8%AE%A1%E7%BD%91The-Data-Link-Layer-3%2F</url>
-    <content type="text"><![CDATA[Error Control （差错控制）Type of ErrorsLost frames: a frame failed to arrive to the other sideOwing to noise burst or dropped from a queueDamaged frames: some bits are in errorError detectionParity check: able to detect single bit errorsCyclic Redundancy Check (CRC): detecting some burst errorsChecksum, to be studied in Network layerError correctionForward Error Correction (FEC，前向纠错)Retransmission: Automatic Repeat reQuest(ARQ)Single-bit Error &amp; Burst Error在差错控制中会有丢帧和帧损坏，差错控制只考虑帧损坏，而帧损坏又分为两种情况：单比特错误(普遍存在)，突发错误。奇偶校验单个奇偶校验位性能可检验出奇数个位反转错误其他情况漏检率为50%Error Correcting Code（纠错码）基本思路：将冗余信息加入到待发送的信息中基本术语Block code（块码）Systematic code 先发m位数据,再发r位校验$XOR\quad B\oplus B=0 \quad A\oplus B\oplus B=A\quad A\oplus B=X\quad A=x\oplus B$Code rate: $m/n\quad (n=m+r)$Code rate:编码率Error Correcting Code（纠错码）: Hamming Distance(汉明/海明距离)Example of an ECC Consider a code with only four valid codewords:0000000000, 00000 1111111111 00000, 11111 11111 This code has a distance 5, which means that it can correct 2-bit errors.If the codeword 00000 00111 arrives, the receiver knows that the original must have been 00000 11111If a triple error changes 00000 00000 into 00000 00111, the error will not be corrected properlyThe Number of Check BitsFind out the number of check bits needed to correct single bit errorCodingm: message bitsr: check bitsn: codeword length (n=m+r)$2^m$ legal messages推导：Each legal message has n illegal codewords at a distance 1 from it. Altogether there are $(n+1)2^m$ codewords$(n+1)2^ m \le2^n\Rightarrow(m+r+1)\le2^r$$Example:m=7,r\ge4$Hamming Code: correction of single bit errorThe bits of the codeword are numbered, start with 1 at left end, bit 2 to its immediate right, and so on.Check bitsThe bits that are powers of 2 (1, 2, 4, 8, 16…) are check bitsEach check bit forces the parity of some collection of bits, including itself, to be even (or odd).Data bitsThe rest (3,5,6,…) are filled up with the m data bitsExample of Hamming Code(1)Message: ‘A’ (7-bit ASCII 100,0001)Data Bits: 3,5,6,7,9,10,114 Check bits, Bit 1,2,4,8 (even parity, 偶校验)Bit Number: 1 2 3 4 5 6 7 8 9 10 11Codeword: 0 0 1 0 0 0 0 1 0 0 1发送前编码： 3=1+2， 5=1+4， 6=2+4， 7=1+2+4 9=1+8， 10=2+8，11=1+2+8Example of Hamming Code(2)Hamming code的简便法Example:一些小结数据链路层的功能：相邻节点间可靠地传输数据帧实现可靠传输的功能成帧（帧同步） ：在原始比特流中识别出帧差错控制：检测差错、纠正差错流量控制：防止发送方速度过快而淹没接收方（接收方 来不及接收而丢失数据）介质访问控制(MAC)：对于共享信道，如何防止因两个 站点同时发送而导致冲突？ —-在下一章学习向网络层提供的服务：取决于不同的物理网络（数 据链路层+物理层）Ethernet：无连接服务Wifi：带确认的无连接服务ATM：面向连接服务数据链路层的第一个功能：成帧framing目标：让接收方能够从来自物理层的一串二进制位 流中提取出完整的一帧成帧方法字符计数法：前面加一个帧长度字段，不实用字节(字符)填充法：前面加一个帧首标志字符，后面加 一个帧尾标志字符透明传输：用添加转义字符来实现比特(位)填充法：用0111 1110标记帧头和帧尾透明传输：零比特填充，在帧中连续的五个1之后添 加一个0物理层编码违例法：使用物理层中的非法编码标记帧的 开始和结束，自然解决透明传输，无需填充差错控制方法纠错码：汉明码（海明码），纠正1比特翻转错误序号是2的幂次的位置放校验位，其它位置放数据位任何一个数据位的序号都可以写成2的幂次的和，即由对 应的校验位进行奇偶校验；该位置的数据位出错时，必然 会影响到对应校验位的校验结果检错码+重传纠错奇偶校验交错校验CRC（循环冗余校验）]]></content>
+    <content type="text"><![CDATA[Error Control （差错控制）Type of ErrorsLost frames: a frame failed to arrive to the other sideOwing to noise burst or dropped from a queueDamaged frames: some bits are in errorError detectionParity check: able to detect single bit errorsCyclic Redundancy Check (CRC): detecting some burst errorsChecksum, to be studied in Network layerError correctionForward Error Correction (FEC，前向纠错)Retransmission: Automatic Repeat reQuest(ARQ)Single-bit Error &amp; Burst Error在差错控制中会有丢帧和帧损坏，差错控制只考虑帧损坏，而帧损坏又分为两种情况：单比特错误(普遍存在)，突发错误。奇偶校验单个奇偶校验位性能可检验出奇数个位反转错误其他情况漏检率为50%Error Correcting Code（纠错码）基本思路：将冗余信息加入到待发送的信息中基本术语Block code（块码）Systematic code 先发m位数据,再发r位校验$XOR\quad B\oplus B=0 \quad A\oplus B\oplus B=A\quad A\oplus B=X\quad A=x\oplus B$Code rate: $m/n\quad (n=m+r)$Code rate:编码率Error Correcting Code（纠错码）: Hamming Distance(汉明/海明距离)Example of an ECC Consider a code with only four valid codewords:0000000000, 00000 1111111111 00000, 11111 11111 This code has a distance 5, which means that it can correct 2-bit errors.If the codeword 00000 00111 arrives, the receiver knows that the original must have been 00000 11111If a triple error changes 00000 00000 into 00000 00111, the error will not be corrected properlyThe Number of Check BitsFind out the number of check bits needed to correct single bit errorCodingm: message bitsr: check bitsn: codeword length (n=m+r)$2^m$ legal messages推导：Each legal message has n illegal codewords at a distance 1 from it. Altogether there are $(n+1)2^m$ codewords$(n+1)2^ m \le2^n\Rightarrow(m+r+1)\le2^r$$Example:m=7,r\ge4$Hamming Code: correction of single bit errorThe bits of the codeword are numbered, start with 1 at left end, bit 2 to its immediate right, and so on.Check bitsThe bits that are powers of 2 (1, 2, 4, 8, 16…) are check bitsEach check bit forces the parity of some collection of bits, including itself, to be even (or odd).Data bitsThe rest (3,5,6,…) are filled up with the m data bitsExample of Hamming Code(1)Message: ‘A’ (7-bit ASCII 100,0001)Data Bits: 3,5,6,7,9,10,114 Check bits, Bit 1,2,4,8 (even parity, 偶校验)Bit Number: 1 2 3 4 5 6 7 8 9 10 11Codeword: 0 0 1 0 0 0 0 1 0 0 1发送前编码： 3=1+2， 5=1+4， 6=2+4， 7=1+2+4 9=1+8， 10=2+8，11=1+2+8Example of Hamming Code(2)Hamming code的简便法Example:一些小结数据链路层的功能：相邻节点间可靠地传输数据帧实现可靠传输的功能成帧（帧同步） ：在原始比特流中识别出帧差错控制：检测差错、纠正差错流量控制：防止发送方速度过快而淹没接收方（接收方 来不及接收而丢失数据）介质访问控制(MAC)：对于共享信道，如何防止因两个站点同时发送而导致冲突？ —-在下一章学习向网络层提供的服务：取决于不同的物理网络（数据链路层+物理层）Ethernet：无连接服务Wifi：带确认的无连接服务ATM：面向连接服务数据链路层的第一个功能：成帧framing目标：让接收方能够从来自物理层的一串二进制位流中提取出完整的一帧成帧方法字符计数法：前面加一个帧长度字段，不实用字节(字符)填充法：前面加一个帧首标志字符，后面加 一个帧尾标志字符透明传输：用添加转义字符来实现比特(位)填充法：用0111 1110标记帧头和帧尾透明传输：零比特填充，在帧中连续的五个1之后添加一个0物理层编码违例法：使用物理层中的非法编码标记帧的开始和结束，自然解决透明传输，无需填充差错控制方法纠错码：汉明码（海明码），纠正1比特翻转错误序号是2的幂次的位置放校验位，其它位置放数据位任何一个数据位的序号都可以写成2的幂次的和，即由对 应的校验位进行奇偶校验；该位置的数据位出错时，必然 会影响到对应校验位的校验结果检错码+重传纠错奇偶校验：检测单比特错误/奇数个比特错误，ASCII码使用交错校验 ：块数据使用，n*k矩阵，可检测出长度≤n的错误CRC（循环冗余校验）(1)发送方：待校验数据补充r个0之后，对生成多项式进行模2除法，余数（r位）即为校验信息(2)接收方：待校验数据和校验信息一起，对生成多项式进行模2除法，余数不为0即认为有错]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
